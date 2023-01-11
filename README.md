@@ -1,14 +1,58 @@
-# voyage-tasks
+# GECKOS-TEAM-13 CHAT APPLICATION
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+A real-time chat application built with React and the "react-chat-engine" library.
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+# Features
+- Sending and receiving messages in both group and one-on-one conversations
+- Blocking contacts to prevent them from sending messages
+- User authentication using Firebase and "react-firebase-authentication" library
+- User data storage and previous conversation storage using Firebase Firestore
+- Landing page and chat dashboard
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+# Tech Stack
+- React for the frontend
+- "react-chat-engine" library for adding real-time chat functionality
+- "react-firebase-authentication" library for authentication
+- Firebase Firestore for user data storage and previous conversation storage
+- Tailwind CSS for styling with a few styled components
 
-> Own it & Make it your Own!
+# Deployment
+The application can be easily deployed on platforms like Heroku or Netlify.
+
+# Setup
+To run this project locally, you'll need to have Node.js and npm (or yarn) installed on your computer.
+
+1. Clone the repository
+```
+git clone https://github.com/YOUR_USERNAME/chat-app.git
+
+```
+2. Install dependencies
+```
+npm install
+
+```
+or
+
+```
+yarn install
+
+```
+3. Run the application
+```
+npm start
+
+```
+or
+
+```
+yarn start
+
+```
+
+# Contribute
+If you are interested in contributing to the development of this application, please fork the repository and create a pull request with your changes.
+
+# License
+This project is open source and available under the MIT License and produced during the chingu Voyage 42 by the gecko-team-13.
+
