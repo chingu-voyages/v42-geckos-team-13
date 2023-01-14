@@ -1,7 +1,8 @@
-import React from 'react'
-import './LoginPage.css'
+import React from 'react';
+import './LoginPage.css';
 
 const LoginPage = () => {
+   /* jshint ignore: start */
   return (
     <div className="flex justify-center items-center h-screen bg-indigo-600 flex-col">
     <div>
@@ -33,6 +34,7 @@ const LoginPage = () => {
     </div>
    </div>
   )
-}
+/* jshint ignore: end */
+};
 
-export default LoginPage
+export default LoginPage;

@@ -1,15 +1,13 @@
 import React from 'react';
 import './App.css';
-import LoginPage from './components/LoginPage';
+import LoginPage from './Pages/LoginPage';
 
 function App() {
+  /* jshint ignore: start */
   return (
-    
-    <>
-       <LoginPage />
-    </>
-  
+    <LoginPage />
   );
+  /* jshint ignore: end */
 }
 
 export default App;
