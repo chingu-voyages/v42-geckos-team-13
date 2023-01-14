@@ -1,6 +1,16 @@
-import React from 'react'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
+
+   const navigate = useNavigate();
+
+   const handleClick = () => {
+      navigate("/");
+   };
+
+   /* jshint ignore: start */
   return (
     <div className="flex justify-center items-center h-screen bg-indigo-600 flex-col">
     <div>
@@ -28,10 +38,11 @@ const SignupPage = () => {
     </div>
 
     <div>
-       <p className='text-white text-center mt-3'>have an account? <a href="#" className='text-white-700 font-semibold'>Login</a></p>
+           <p className='text-white text-center mt-3'>have an account? <button onClick={handleClick} className='text-white-700 font-semibold'>Login</button></p>
     </div>
    </div>
   )
-}
+   /* jshint ignore: end */
+};
 
-export default SignupPage
+export default SignupPage;
