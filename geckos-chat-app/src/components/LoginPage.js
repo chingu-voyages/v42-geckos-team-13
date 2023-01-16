@@ -1,5 +1,7 @@
 import React from 'react'
 import './LoginPage.css'
+import { Link } from 'react-router-dom'
+
 
 const LoginPage = () => {
   return (
@@ -29,7 +31,7 @@ const LoginPage = () => {
     </div>
 
     <div>
-       <p className='text-white text-center mt-3'>Don't have an account? <a href="#" className='text-white-700 font-semibold'>Sign up</a></p>
+       <p className='text-white text-center mt-3'>Don't have an account? <Link to={"signup"} className='text-white-700 font-semibold'>Sign up</Link></p>
     </div>
    </div>
   )
