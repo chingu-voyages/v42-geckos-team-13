@@ -1,6 +1,9 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+
+import React from 'react'
+import './SignupPage.css'
+
 import { useNavigate } from "react-router-dom";
+
 
 const SignupPage = () => {
 
@@ -37,11 +40,13 @@ const SignupPage = () => {
             </div>
          </div>
 
-         <div>
-            <p className='text-white text-center mt-3'>have an account? <button onClick={handleClick} className='text-white-700 font-semibold'>Login</button></p>
-         </div>
-      </div>
-   )
+    <div>
+
+           <p className='text-white text-center mt-3'>have an account? <button onClick={handleClick} className='text-white-700 font-semibold'>Login</button></p>
+
+    </div>
+   </div>
+  )
    /* jshint ignore: end */
 };
 

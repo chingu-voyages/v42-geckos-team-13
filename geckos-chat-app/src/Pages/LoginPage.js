@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import firebase from 'firebase/compat/app';
 import { auth } from "../components/firebase";
 
+
+
 const LoginPage = () => {
 
 
@@ -40,7 +42,7 @@ const LoginPage = () => {
             </div>
             <div className='mt-5'>
                <button onClick={() => auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider())} type="submit" className='border-2 border-indigo-700 bg-indigo-700 text-white py-1
-          w-full rounded-md hover:bg-transparent hover:text-indigo-700 font-semibold'>Login with Google</button>
+          w-full rounded-md hover:bg-transparent hover:text-indigo-700 font-semibold'><i class="fa-brands fa-google"></i>&nbsp;&nbsp;Login with Google</button>
 
             </div>
          </div>
