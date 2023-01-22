@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { auth } from "../components/firebase";
+import firebase from 'firebase/compat/app';
 
 //Create context
 const AuthContext = React.createContext();
@@ -25,7 +26,43 @@ export const AuthProvider = ({ children }) => {
         });
     }, [user, navigate]);
 
-    const value = { user };
+    //const value = { user };
+    const value = {
+        user,
+        signup: (email, password) => {
+            return firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((user) => {
+                    setUser(user);
+                    navigate('/chats');
+                })
+                .catch((error) => {
+                    console.log("Error creating user:", error);
+                    throw error;
+                });
+        },
+        login: (email, password) => {
+            return firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((user) => {
+                    setUser(user);
+                    navigate('/chats');
+                })
+                .catch((error) => {
+                    console.log("Error logging in:", error);
+                    throw error;
+                });
+        },
+        logout: () => {
+            return firebase.auth().signOut()
+                .then(() => {
+                    setUser(null);
+                    navigate('/');
+                })
+                .catch((error) => {
+                    console.log("Error logging out:", error);
+                    throw error;
+                });
+        }
+    };
 
     /* jshint ignore: start */
     return (
