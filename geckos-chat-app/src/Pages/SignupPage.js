@@ -24,7 +24,7 @@ const SignupPage = () => {
 
       e.preventDefault();
       createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      console.log(userCredential)}).catch((error) => {console.log(error)})
+      console.log(userCredential)}).catch((error) => {alert("Email already registered, please login")})
    }
 
 
